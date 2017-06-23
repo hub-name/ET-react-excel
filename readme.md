@@ -1,4 +1,4 @@
-# react + es6 + webpack 架构模板
+# ET-react-excel
 
 <font color="#0099ff" size=12  face="微软雅黑">项目目录结构</font>
 -----------------
@@ -18,14 +18,11 @@
 _使用方法：_
 -----------------
 
-### 1. `git clone https://github.com/cooleye/react-template.git`
-### 2. `cd react-template` 进入项目目录
+### 1. `git clone https://github.com/hub-name/ET-react-excel.git`
+### 2. `ET-react-excel` 进入项目目录
 ### 3. `npm install` 安装依赖
 ### 4. `npm start` 运行项目
 
 
 -----------------------------------------
 
-#### *或者你也可以从零开始，先执行 npm init,创建 package.json，然后根据需要把依赖的模块安装上*
-# ET-react-excel
-# ET-react-excel

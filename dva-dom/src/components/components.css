@@ -1,0 +1,8 @@
+.mainNav{
+    text-align: right;
+}
+.mainNav div{
+    margin: 0 0 15px 15px;
+    display: inline-block;
+    text-align: right
+}

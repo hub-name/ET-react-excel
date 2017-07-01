@@ -3,12 +3,12 @@ const _ = require('lodash');
 const React = require('react');
 const { Editors, Toolbar, Formatters } = require('react-data-grid-addons');
 var update = require('react-addons-update');
-import 'bootstrap/dist/css/bootstrap.css';
+import bootstrap from 'bootstrap/dist/css/bootstrap.css';
 const Example = React.createClass({
   getInitialState() {
-
-    return {
-      _columns :[
+    return { 
+      _Popup:false,
+      _columns: [
         {
           key: 'id',
           name: 'ID',
@@ -97,7 +97,6 @@ const Example = React.createClass({
     this.setState({ rows });
   },
   handleAddCol() {
-    console.log(this.state._columns.length);
     const newCol = {
       key: this.state._columns.length,
       name: this.state._columns.length,
@@ -105,27 +104,74 @@ const Example = React.createClass({
     }
     let cols = this.state._columns.slice();
     cols.push(newCol)
-    this.setState({ _columns:cols });
-    //console.log(a);
-    console.log(this.state._columns);
+    this.setState({ _columns: cols });
   },
+  handleChange: function(event,index,i) {
+    this.setState({
+      _columns: [
+        ...this.state._columns.slice(0, index),
+        { ...this.state._columns[index], name: event.target.value },
+        ...this.state._columns.slice(index + 1)
+      ]
+    });
+  },
+  ModifyTh(){
+    this.setState({_Popup: !this.state._Popup})
+  }, 
   render() {
-    return (
-      <div>
-        <ReactDataGrid
-          enableCellSelect={true}
-          columns={this.state._columns}
-          rowGetter={this.rowGetter}
-          rowsCount={this.state.rows.length}
-          toolbar={<Toolbar onAddRow={this.handleAddRow} />}
-          minHeight={500}
-          onGridRowsUpdated={this.handleGridRowsUpdated} />
+    let leftNav = {
+      width:"15%",
+      height:100,
+      float:"left"
+    }
+    let rightMain = {
+      width:"85%",
+      height: "auto",
+      float:"left",
+      position: "relative"
+    }
+    let liStyle = {
+      width:"40%",
+      listStyle: "none",
+      float: "left",
+      margin: "5px"        
+    }
+    let PopupBox = {height:"300px",width:"400px",background:"#ddd",position: "absolute",top: "50%",left: "50%", margin: "-130px auto auto -200px"}
+    let PopupShow = this.state._Popup ? {display:"block"}:{display:"none"}
+  return (
+    <div className="row">
+      <div className="col-md-10" style={leftNav}>
+        
+      </div>
+      <div className="col-md-2 " style={rightMain}>
         <div className="react-grid-Toolbar">
           <div className="tools">
-            <button type="button" onClick={this.handleAddCol} className="btn">Add col</button>
+            <button type="button" onClick={this.ModifyTh} className="btn">修改TH</button>
+            <button type="button" onClick={this.handleAddCol} className="btn">Add Col</button>
           </div>
         </div>
-      </div>);
+        <ReactDataGrid
+        enableCellSelect={true}
+        columns={this.state._columns}
+        rowGetter={this.rowGetter}
+        rowsCount={this.state.rows.length}
+        toolbar={<Toolbar onAddRow={this.handleAddRow} />}
+        minHeight={800}
+        onGridRowsUpdated={this.handleGridRowsUpdated} />
+        <div className="" style={PopupShow}>
+          <h3>修改th</h3>
+          <ul>
+            {
+              this.state._columns.map((i,index) => {
+                    return <li style={liStyle}><input type="text" key={index} value={i.name} onChange={(e)=>this.handleChange(e,index,i)} /></li>
+              })
+            }
+          </ul>
+        </div>
+        
+      </div>
+      <div className="cesh"></div>
+    </div>);
 
   }
 });

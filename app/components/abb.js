@@ -1,5 +1,6 @@
 const ReactDataGrid = require('react-data-grid');
 const React = require('react');
+const { Map } = require('immutable')
 const { Editors, Toolbar, Formatters } = require('react-data-grid-addons');
 
 const Example = React.createClass({

@@ -1,0 +1,39 @@
+{
+"_columns": [
+        {
+          "key": "id",
+          "name": "ID",
+          "width": 80
+        },
+        {
+          "key": "task",
+          "name": "Title",
+          "editable": true
+        },
+        {
+          "key": "priority",
+          "name": "Priority",
+          "editable": true
+        },
+        {
+          "key": "issueType",
+          "name": "Issue Type",
+          "editable": true
+        },
+        {
+          "key": "complete",
+          "name": "% Complete",
+          "editable": true
+        },
+        {
+          "key": "startDate",
+          "name": "Start Date",
+          "editable": true
+        },
+        {
+          "key": "completeDate",
+          "name": "Expected Complete",
+          "editable": true
+        }
+      ],
+}

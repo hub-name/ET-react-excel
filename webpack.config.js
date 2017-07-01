@@ -13,8 +13,15 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.json$/, loader: "json" },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' ,query: { presets: ['es2015','react'] }},
-      { test: /\.css$/, loader: 'style!css?modules!postcss' },
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' ,query: { presets: ['es2015','react','stage-0'] }},
+      {
+         test: /\.css$/,
+         use: [
+           'style-loader',
+          'css-loader'
+         ]
+      },
+      {test: /\.less$/, loader: 'style!css!less'},
       //配置file-loader，加载图片，字体资源
       { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=50000&name=[path][name].[ext]'}
     ]

@@ -1,0 +1,10 @@
+.a{
+    width: 30%;
+    float: left;
+    height: 500px;
+    background: #000;
+}
+.b{
+    width: 70%;
+    float: left;
+}

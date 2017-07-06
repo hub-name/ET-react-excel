@@ -6,3 +6,14 @@
     display: inline-block;
     text-align: right
 }
+.saveBtn{
+    margin-top: 15px !important;
+}
+.savemsg{
+    float: left;
+    width: 50%;
+    margin-left: 0 !important;
+}
+.savemsg input{
+    width: 30%;
+}

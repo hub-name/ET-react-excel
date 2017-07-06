@@ -1,0 +1,120 @@
+{
+  "assetTypes": [
+    {
+      "assetTypeId": 5,
+      "assetTypePId": 0,
+      "assetTypeName": "Cabinet",
+      "assetTypeDisplayName": "机柜",
+      "assetTypePath": ".0.5",
+      "assetTypeComment": ""
+    },
+    {
+      "assetTypeId": 6,
+      "assetTypePId": 0,
+      "assetTypeName": "Rackmount",
+      "assetTypeDisplayName": "机架IT设备",
+      "assetTypePath": ".0.6",
+      "assetTypeComment": ""
+    },
+    {
+      "assetTypeId": 7,
+      "assetTypePId": 6,
+      "assetTypeName": "Server",
+      "assetTypeDisplayName": "服务器",
+      "assetTypePath": ".0.6.7",
+      "assetTypeComment": ""
+    },
+    {
+      "assetTypeId": 8,
+      "assetTypePId": 7,
+      "assetTypeName": "IBM",
+      "assetTypeDisplayName": "IBM",
+      "assetTypePath": ".0.6.7.8",
+      "assetTypeComment": ""
+    },
+    {
+      "assetTypeId": 9,
+      "assetTypePId": 0,
+      "assetTypeName": "infrastructure",
+      "assetTypeDisplayName": "基础设施",
+      "assetTypePath": ".0.9",
+      "assetTypeComment": ""
+    },
+    {
+      "assetTypeId": 10,
+      "assetTypePId": 9,
+      "assetTypeName": "smoke_sensor",
+      "assetTypeDisplayName": "烟雾传感器",
+      "assetTypePath": ".0.9.10",
+      "assetTypeComment": ""
+    }
+  ],
+  "assetModels": [
+    {
+      "assetModelId": 166,
+      "assetTypeId": 5,
+      "hierarchyId": 3,
+      "assetModelName": "Cab_TuTeng_60",
+      "assetModelDisplayName": "图腾60",
+      "assetModelVersion": 1,
+      "assetModelBrand": "图腾",
+      "assetModelWidth": 0.6,
+      "assetModelHeight": 2,
+      "assetModelDepth": 1,
+      "assetModelPower": 0,
+      "assetModelWeight": 0,
+      "assetModelBearWeight": 800,
+      "assetModelPositionSize": 1,
+      "assetModelRootPath": "Unity3D/models/图腾_Cab_TuTeng_60_1/",
+      "assetModelUnityModel": "Cab_TuTeng_60.unity3d",
+      "assetModelSimpleUnityModel": "-",
+      "assetModelPicture": "TuTeng_60.png",
+      "assetModelFlag": "CABINET_U_ORDER_DOWN",
+      "assetModelExtraInfo": "{}"
+    },
+    {
+      "assetModelId": 167,
+      "assetTypeId": 8,
+      "hierarchyId": 70001,
+      "assetModelName": "IBM_X3650-M3",
+      "assetModelDisplayName": "IBM_X3650-M3",
+      "assetModelVersion": 1,
+      "assetModelBrand": "IBM",
+      "assetModelWidth": 0.445,
+      "assetModelHeight": 0.085,
+      "assetModelDepth": 0.746,
+      "assetModelPower": 750,
+      "assetModelWeight": 30,
+      "assetModelBearWeight": 0,
+      "assetModelPositionSize": 2,
+      "assetModelRootPath": "Unity3D/models/IBM_IBM_X3650-M3_1/",
+      "assetModelUnityModel": "RIH_Ser_IBM_System_x3650-M3.unity3d",
+      "assetModelSimpleUnityModel": "-",
+      "assetModelPicture": "Ser_IBM_System_x3650-M3.jpg",
+      "assetModelFlag": "NORMAL",
+      "assetModelExtraInfo": "{}"
+    },
+    {
+      "assetModelId": 168,
+      "assetTypeId": 10,
+      "hierarchyId": 40004,
+      "assetModelName": "IOT_SD_LEADER119_1",
+      "assetModelDisplayName": "烟感-LEADER119",
+      "assetModelVersion": 1,
+      "assetModelBrand": "undefined",
+      "assetModelWidth": 0.104,
+      "assetModelHeight": 0.104,
+      "assetModelDepth": 0.057,
+      "assetModelPower": 0,
+      "assetModelWeight": 0,
+      "assetModelBearWeight": 0,
+      "assetModelPositionSize": 1,
+      "assetModelRootPath": "Unity3D/models/undefined_IOT_SD_LEADER119_1_1/",
+      "assetModelUnityModel": "IOT_SD_LEADER119_1.unity3d",
+      "assetModelSimpleUnityModel": "-",
+      "assetModelPicture": "-",
+      "assetModelFlag": "NORMAL",
+      "assetModelExtraInfo": "{}"
+    }
+  ]
+}

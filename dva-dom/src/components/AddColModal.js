@@ -35,7 +35,6 @@ class AddColModal extends React.Component {
         return val;
     }
     handleCancel = () => {
-        console.log('Clicked cancel button');
         this.setState({
             visible: false,
         });
